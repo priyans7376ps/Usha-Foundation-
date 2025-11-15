@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate | {{ ngo_name }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Donate to {{ ngo_name }}</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section id="donation-form">
+      <h2>Fill Your Details</h2>
+      <form method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Your Email" required><br><br>
+
+        <label for="amount">Donation Amount:</label><br>
+        <input type="number" id="amount" name="amount" placeholder="Amount (INR/USD)" required><br><br>
+
+        <button type="submit" class="btn">Proceed to Donate</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 {{ ngo_name }} | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

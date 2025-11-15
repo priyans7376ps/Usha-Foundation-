@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ ngo_name }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>{{ ngo_name }}</h1>
+    <p><strong>Founder:</strong> {{ founder }}</p>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        {{ ngo_name }} is a non-profit organization working to support poor people, 
+        provide education, and improve lives.
+      </p>
+      <p><strong>Address:</strong> {{ address }}</p>
+      <p><strong>Contact:</strong> {{ contact }}</p>
+    </section>
+
+    <!-- Donate Section -->
+    <section id="donate">
+      <h2>Support Us</h2>
+      <p>We welcome donations from Indian and International supporters.</p>
+      <a href="{{ url_for('donate') }}" class="btn">Donate Now</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 {{ ngo_name }} | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
